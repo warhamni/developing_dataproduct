@@ -16,10 +16,11 @@ Shiny Apps
 The Apps can be view at this page 
 https://warhamni.shinyapps.io/developing_dataproduct/
 
-Github Repo
+Github and RPubs Repo
 ========================================================
 
-The code for the shiny apps can be downloaded from the github repo at https://github.com/warhamni/developing_dataproduct
+The code for the shiny apps can be downloaded from the github repo at https://github.com/warhamni/developing_dataproduct or http://rpubs.com/warhamni/ddp
+
 
 
 
