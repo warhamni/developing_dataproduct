@@ -1,0 +1,31 @@
+---
+title: "Module 9: Developing Data Product"
+author: "Warhamni Jani"
+date: "April 11, 2016"
+output: slidy_presentation
+---
+
+## About The Apps
+
+This Project Assignment will give you facts and figures based on selected state your based on state.77 data available in R datasets.
+
+The shiny Apps will calculate the mean for the state and figure selected.
+
+
+## Shiny Apps
+
+The Apps can be view at this page 
+https://warhamni.shinyapps.io/developing_dataproduct/
+
+
+## Github Repo
+
+The code for the shiny apps can be downloaded from the github repo at https://github.com/warhamni/developing_dataproduct
+
+
+## Code Reproducibility
+
+This repo contains all the code and data for this solution. The files and folders are as follows:
+-	README.md
+-	ui.R and server.R - The shiny app code
+-	/presentation - The R Markdown used to create the RStudio Presenter presentation.
