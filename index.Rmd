@@ -19,9 +19,9 @@ https://warhamni.shinyapps.io/devdataprod/
 
 
 
-## Github Repo
+## Github and Rpubs Repo
 
-The code for the shiny apps can be downloaded from the github repo at https://github.com/warhamni/developing_dataproduct
+The code for the shiny apps can be downloaded from the github repo at https://github.com/warhamni/developing_dataproduct and http://rpubs.com/warhamni/169903
 
 
 ## Code Reproducibility
