@@ -15,7 +15,8 @@ The shiny Apps will calculate the mean for the state and figure selected.
 ## Shiny Apps
 
 The Apps can be view at this page 
-https://warhamni.shinyapps.io/developing_dataproduct/
+https://warhamni.shinyapps.io/devdataprod/
+
 
 
 ## Github Repo
