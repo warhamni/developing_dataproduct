@@ -31,7 +31,7 @@ shinyUI(pageWithSidebar(
   # number of observations
   
   mainPanel(
-    list(tags$head(tags$style("body {background-color: #ADD8E6; }"))),
+    list(tags$head(tags$style("body {background-color: #58FAF4; }"))),
     
     br(),
     
@@ -44,6 +44,8 @@ shinyUI(pageWithSidebar(
     verbatimTextOutput("name"),
     
     verbatimTextOutput("figure"),
+    
+    verbatimTextOutput("density"),
     
     verbatimTextOutput("tabletext"),
     
