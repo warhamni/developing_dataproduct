@@ -4,7 +4,7 @@ library(shiny)
 shinyUI(pageWithSidebar(
   
   # Header title
-  headerPanel("Module 9:DevelopingData Products with Shiny App"),
+  headerPanel("Module 9:Developing Data Products with Shiny App"),
   
   # Sidebar with controls to select a dataset and specify the view
   sidebarPanel(
@@ -35,7 +35,7 @@ shinyUI(pageWithSidebar(
     
     br(),
     
-    p("This Project Assignment will give you facts and figures based on selected state your based on state.77 data available in R datasets"),
+    p("This Project Assignment will give you facts and figures based on state.77 data available in R datasets"),
     img(src="http://www.freeworldmaps.net/northamerica/united-states/us-political-map.jpg", width="60%"),
     
     br(),
@@ -45,12 +45,12 @@ shinyUI(pageWithSidebar(
     
     verbatimTextOutput("figure"),
     
-    verbatimTextOutput("density"),
-    
     verbatimTextOutput("tabletext"),
     
     tableOutput("view"),
     
-    verbatimTextOutput("mean")))
+    verbatimTextOutput("mean"),
+    
+    verbatimTextOutput("density")))
 )
 

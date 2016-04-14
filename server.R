@@ -1,50 +1,9 @@
 library(shiny)
-library(datasets)
+#library(datasets)
 library(DT)
 
-# Define server logic required to summarize and view the selected dataset
-data(state)
-statedata = cbind(data.frame(state.x77), state.abb, state.area, state.center,  state.division,state.name, state.region)
-
-str(statedata)
-knitr::kable(state.x77)
-
-#state.x77$name <- rownames(state.name)
-#state.x77$figure <- dimnames(8)
-rownames(state.x77)<- c("Alabama","Alaska",
-                        "Arizona","Arkansas",
-                        "California","Colorado",
-                        "Connecticut","Delaware",
-                        "Florida","Georgia",
-                        "Hawaii","Idaho",
-                        "Illinois","Indiana",
-                        "Iowa","Kansas",
-                        "Kentucky","Louisiana",
-                        "Maine","Maryland",
-                        "Massachusetts","Michigan",
-                        "Minnesota","Mississippi",
-                        "Missouri","Montana",
-                        "Nebraska","Nevada",
-                        "New Hampshire",
-                        "New Jersey", "New Mexico","New York","North Carolina",
-                        "North Dakota","Ohio","Oklahoma",
-                        "Oregon",
-                        "Pennsylvania",
-                        "Rhode Island",
-                        "South Carolina",
-                        "South Dakota",
-                        "Tennessee",
-                        "Texas",
-                        "Utah",
-                        "Vermont",
-                        "Virginia",
-                        "Washington",
-                        "West Virginia",
-                        "Wisconsin",
-                        "Wyoming")
-
-colnames(state.x77) <- c("Population","Income","Illiteracy","LifeExp","Murder","Hs Grad","Frost","Area")
-#colnames(state.x77)<- c("Population","Income","Illiteracy","LifeExp","Murder","Hs Grad","Frost","Area")
+datastate<-read.csv("USstatedata1.csv",header = TRUE, sep = ",")
+datastate$figure <- rownames(datastate)
 
 shinyServer(function(input, output) {
   
@@ -106,23 +65,20 @@ shinyServer(function(input, output) {
   output$figure <- renderText({
     paste(input$figure,"is the facts selection for the",input$name,"state")
   })
-  # Print out the density facts selected  
+  # Print out the Population facts selected  
   output$density <- renderText({
-    print(statedensity<- head(state.x77[,"Population"])/head(state.x77[,"Area"]))
-    paste("The table below summarises the US State density selected :",statedensity )
+    print(statepop<- mean(datastate$Population))
+    paste("The mean Population for whole US State is :",statepop )
   })
   
   output$tabletext <- renderText({
-    paste("The table below summarises the US State Facts and Figures selected:")
-  })
-  # Show table of results for that state
-  output$view <- renderDataTable({
-    print(viewtab<-head(state.x77$name==input$name,c("Population","Income","Illiteracy","Murder","HS.Grad","Frost","Area")))
+    paste("The data value of",input$name," is:")
   })
   
   # Print out the mean of figure selected
-  output$mean <- renderText({knitr::kable(state.x77$dimnames)
-statedata<- state.x77[state.x77$name==input$name,input$figure]
-paste("The mean value of",head(state.x77[,`colnames<-`(state.x77$name==input$figure)])," is",print(mean(input$figure)))
+ output$mean <- renderText({
+statedata<- datastate[(datastate$State==input$name),1:9]
+#paste("The data value of",input$name," is",print(statedata))
+paste(print(statedata))
     })
 })

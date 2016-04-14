@@ -7,26 +7,30 @@ output: slidy_presentation
 
 ## About The Apps
 
-This Project Assignment will give you facts and figures based on selected state your based on state.77 data available in R datasets.
+This Project Assignment will give you facts and figures based on selected state.
+The data are actually derived form data available in R datasets.
 
-The shiny Apps will calculate the mean for the state and figure selected.
+The shiny Apps will calculate:
+
+* The data set for the selected state name
+* The mean for the whole US State Population
 
 
 ## Shiny Apps
 
 The Apps can be view at this page 
-https://warhamni.shinyapps.io/devdataprod/
+https://warhamni.shinyapps.io/re-ddp/
 
 
+## Github and RPubs Repo
 
-## Github and Rpubs Repo
-
-The code for the shiny apps can be downloaded from the github repo at https://github.com/warhamni/developing_dataproduct and http://rpubs.com/warhamni/169903
+The code for the shiny apps can be downloaded from the github repo at https://github.com/warhamni/developing_dataproduct
 
 
 ## Code Reproducibility
 
 This repo contains all the code and data for this solution. The files and folders are as follows:
--	README.md
--	ui.R and server.R - The shiny app code
--	/presentation - The R Markdown used to create the RStudio Presenter presentation.
+
++	README.md
++	ui.R and server.R - The shiny app code
++	/presentation - The R Markdown used to create the RStudio Presenter presentation.
